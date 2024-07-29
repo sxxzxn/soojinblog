@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수진blog_list</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link {
+      color: black
+    }
+
+    a:visited {
+      color: black
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 800px;
+      height: 610px;
+      margin: 0 auto;
+    }
+
+    .contents {
+      height: 550px;
+    }
+
+    .project2,
+    .project1 {
+      overflow: hidden;
+      margin-top: 5%;
+    }
+
+    .review {
+      float: left;
+      position: absolute;
+      display: none;
+      transition: 0.5 ease-in;
+    }
+
+    video {
+      width: 400px;
+      height: 400px;
+    }
+
+    section:hover>.review {
+      transform: translate(400px, -70px);
+      display: block;
+    }
+
+    .pagechange {
+      background-color: #A1A1A3;
+      border: none;
+      color: white;
+      width: 20%;
+      height: 35px;
+      font-size: 14pt;
+      margin-top: 10px;
+    }
+
+    .pagechangebutton {
+      display: flex;
+      justify-content: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="container">
+
+
+    <div class="contents">
+
+      <section class="project2">
+        <a href="detail2.html">
+          <h2>개인 홈페이지 만들기</h2>
+          <p>HTML, CSS, JS, JSP를 사용한 프론트엔드 및 회원관리 기능을 MVC 패턴의 MODEL1 구조로 백엔드 구현</p>
+        </a>
+        <div class="review">
+          <video src="../CSS/video/pro2.mp4" autoplay loop muted></video>
+        </div>
+      </section>
+      <a href="detail1.html">
+        <section class="project1">
+          <h2>socket 을 활용한 채팅 프로그램</h2>
+          <p>socket을 활용한 TCP 양방향 통신 실시간 1:1채팅 프로그램 구현</p>
+      </a>
+      <div class="review">
+        <video src="../CSS/video/pro1.mp4" autoplay loop muted></video>
+      </div>
+      </section>
+
+    </div>
+    <div class="pagechangebutton">
+      <input type="button" value="<" class="pagechange" onclick="window.location.href='posts.html'">
+    </div>
+
+  </div>
+
+  <div id="footer"> </div>
+</body>
+
+</html>

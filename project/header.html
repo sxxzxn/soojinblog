@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #header {
+      text-decoration: none;
+      width: 100%;
+      /* 부모 요소의 너비와 똑같게 */
+      height: 200px;
+      /* 헤더의 높이 */
+      background-color: #acacac;
+      background-image: url('../css/image/82.jpg');
+      /* 배경 이미지 설정 */
+      background-size: cover;
+      /* 이미지가 요소를 덮도록 조절 */
+      background-position: center;
+      /* 이미지의 위치를 중앙으로 설정 */
+      margin: 0px auto;
+
+    }
+    a{
+      text-decoration: none;
+    }
+
+    #logo {
+      margin-left: 20px;
+      float: left;
+    }
+
+    #logo:visited {
+      text-decoration: none;
+      color: black;
+    }
+
+    #header_logo:visited {
+      color: black
+    }
+    
+    nav{
+      margin-right: 20px;
+    }
+
+    nav li {
+      list-style-type: none;
+      float: right;
+      display: flex;
+      margin-right: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-style: bold;
+      font-size: 13px;
+    }
+
+    .nav:hover {
+      font-weight: bold;
+      transition: all 0.9 ease-in;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <header id="header">
+
+    <div id="logo"><a href="home.html" id="header_logo">수진 Blog</a></div>
+    <nav>
+      <ui>
+        <li class="nav"><a href="login.html">LOGIN</a></li>
+        <li class="nav"><a href="contact.html">CONTACT</a></li>
+        <li class="nav"><a href="posts.html">POSTS</a></li>
+        <li class="nav"><a href="about.html">ABOUT</a></li>
+        <li class="nav"><a href="home.html">HOME</a></li>
+      </ui>
+    </nav>
+    <br>
+    <div id="main"></div>
+  </header>
+</body>
+
+</html>

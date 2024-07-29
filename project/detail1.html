@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수진blog_post</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      /* 브라우저 기본 마진 리셋 */
+      padding: 0;
+      /* 브라우저 기본 패딩 리셋 */
+      box-sizing: border-box;
+      /* 테두리까지 포함해서 박스 모델 너비로 계산 */
+    }
+
+    .container {
+      width: 800px;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      /* 텍스트 링크 밑줄 없애기 */
+    }
+
+    section {
+      display: flex;
+    }
+
+    ul {
+      list-style: none;
+      justify-self: flex-end;
+    }
+
+    video {
+      margin: 10px;
+      width: 350px;
+      justify-self: flex-start;
+    }
+
+    video>.speed2 {
+      margin: 10px;
+      width: 350px;
+    }
+
+    section>img {
+      width: 350px;
+    }
+
+    .pagechange {
+      background-color: #A1A1A3;
+      border: none;
+      color: white;
+      width: 10%;
+      height: 35px;
+      font-size: 14pt;
+      margin-top: 10px;
+    }
+
+    .pagechangebutton {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .move {
+      width: 50px;
+      position: fixed;
+      right: 100px;
+      bottom: 20px;
+      overflow: hidden;
+    }
+
+    .move>a {
+      display: block;
+    }
+
+    .move>img {
+      display: block;
+      width: 100%;
+      height: 100%
+    }
+
+    .move>p {
+      display: none;
+    }
+
+    a>img {
+      width: 50px;
+    }
+
+    .move:hover p {
+      display: block;
+      color: white;
+      transform: translate(10px,34px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <div class="container">
+    <div class="contents">
+      <div class="pagechangebutton" id="top">
+        <input type="button" value="<" class="pagechange" onclick="window.location.href='posts.html'">
+      </div>
+      <h2>Project5.GPS 기반 반려견 산책 연결 플랫폼 (웹 앱)</h2>
+      <p>실시간 위치 서비스를 활용한 동네 반려견들과 견주들을 위한 연결 플랫폼입니다.
+        공공 데이터와 지도 api를 통해 산책 경로를 정하는 데 도움을 주며
+        실시간 위치 추적 서비스를 통한 주선 기능, 소셜 커뮤니티 기능,
+        관리자 기능을 Spring RestFulAPI로 구현했습니다.</p>
+
+      <h3>LOGIN</h3>
+      <section>
+        <video src="../CSS/video/login.mp4" autoplay controls loop muted></video>
+        <ul>
+          <li>SPRING SECURITY
+            <ul>
+              <li>사용자의 인증 권한을 처리하고 비밀번호를 안전한 방식으로 암호화시켜 저장</li>
+              <li>JWT를 사용하여 인증된 사용자의 세션을 관리하고 API 엔드포인트를 통해 로그인을 처리</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <video src="../CSS/video/snslogin.mp4" autoplay controls loop muted></video>
+        <ul>
+          <li>SNS로그인
+            <ul>
+              <li> 설정된 REDIRECT URL로 인가 코드를 전달 받아</li>
+              <li>카카오의 OAuth 토큰 방식을 사용하여 액세스 토큰을 얻어 로그인을 처리합니다</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <h3>ADMIN</h3>
+      <p>관리자 페이지의 주요 기능 중 하나인 메인대시보드입니다. Chart.js를 이용하여 막대 그래프, 선 그래프, 원형 차트의 다양한 그래픽 요소를 시각화하였습니다. 실제 데이터베이스와 연동되어 실제
+        데이터를 반영하여 실시간으로 기록이 반영됩니다.</p>
+      <section>
+        <video src="../CSS/video/admin.mp4" autoplay controls loop></video>
+        <ul>
+          <li>Chart.js 
+              <li>막대 그래프, 선 그래프, 원형 차트의 다양한 그래픽 요소를 시각화</li>
+            </ul>
+          </li>
+          <li>
+            모니터링 분석
+            <ul>
+              <li>페이지 이용 통계와 같은 실시간 정보를 제공하기 위해 javascript와 setInterval 함수를 이용하여 데이터의 업데이트를 주기적으로 처리하도록 설계</li>
+              <li>이를 통해 관리자는 실시간으로 모니터링 분석이 가능합니다</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <video src="../CSS/video/admember.mp4" autoplay controls loop muted></video>
+        <ul>
+          <li>
+            비동기통신
+            <ul>
+              <li>페이지 전환 없이 회원 정보를 수정할 수 있도록 기능을 구현</li>
+              <li>관리자는 웹 페이지를 전환하지 않고도 손쉽게 회원 정보를 업데이트 가능</li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <img src="../CSS/image/email.png">
+        <ul>
+          <li>
+            회원관리 자동화
+            <ul>
+              <li>Spring Scheduler 사용</li>
+              <li>원하는 조건값을 설정하여 해당 설정값에 도달한 회원에게 메일 전송</li>
+              <li>특정 조건값을 달성한 회원은 자동으로 등급 변동
+                <ul>
+                  <li>ex)매너지수가 낮은 회원은 블랙 등급으로 변경하여 로그인 차단</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <h2>troubleshooting</h2>
+      <section>
+        <video src="../CSS/video/speed1.mp4" autoplay controls loop muted></video>
+        <video src="../CSS/video/speed2.mp4" autoplay controls loop muted class="speed2"></video>
+      </section>
+      <p>회원 관리 페이지에 접속할 때 응답 속도를 개선하기 위해서 해당 페이지에 대한 데이터만 출력할 수 있도록 페이징을 구현해 응답 속도를 개선하였습니다</p>
+      <ul>
+        <li>1.부분 범위 페이지
+          <ul>
+            <li>데이터베이스에서 rownum을 이용하여 데이터를 효율적으로 추출하여 데이터베이스 쿼리의 성능 최적화</li>
+          </ul>
+        </li>
+        <li>2.검색 조건 인덱스 생성
+          <ul>
+            <li>검색에 사용되는 필드에 한해서 인덱스를 생성하여 검색 속도를 향상</li>
+          </ul>
+        <li>3.JSON 데이터 구조
+          <ul>
+            <li style="margin-bottom: 10px;">클라이언트는 이러한 기능을 요청할 때 필요한 파라미터를 서버에 전달하고, 서버는 해당 요구 사항에 맞추어 데이터를 처리하여 JSON
+              형식으로 클라이언트에게 전송</li>
+          </ul>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="move">
+    <p>TOP</p>
+    <a href="#top">
+      <img src="../CSS/image/love.png">
+    </a>
+  </div>
+  <div id="footer"> </div>
+</body>
+
+</html>

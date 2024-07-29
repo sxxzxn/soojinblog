@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수진blog_login</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      /* 브라우저 기본 마진 리셋 */
+      padding: 0;
+      /* 브라우저 기본 패딩 리셋 */
+      box-sizing: border-box;
+      /* 테두리까지 포함해서 박스 모델 너비로 계산 */
+    }
+
+    a {
+      text-decoration: none;
+      /* 텍스트 링크 밑줄 없애기 */
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .contents {
+      width: 800px;
+      height: 625px;
+      margin: 0 auto;
+    }
+
+
+    .login {
+      width: 90vh;
+      /* 내용 전체의 너비 */
+      margin: 0px auto;
+      /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 */
+      padding-top: 150px;
+      padding-left: 20vh;
+    }
+
+    #loginForm input {
+      width: 60%;
+      margin-bottom: 15px;
+    }
+
+    /* 로그인 입력칸 css */
+    .input-box {
+      position: relative;
+      margin: 0px;
+    }
+
+    /* 입력칸 css */
+    .input-box>input {
+      background: transparent;
+      border: none;
+      border-bottom: solid 1px #000;
+      padding: 20px 0px 5px 0px;
+      font-size: 14pt;
+    }
+
+    /* 왼쪽 상단위 */
+    label {
+      color: #8f8989;
+      font-size: 12pt;
+      top: 5px;
+      position: absolute;
+      left: 0;
+      transition: all 0.2s ease;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+      color: #000;
+      font-size: 10pt;
+      top: 0;
+      transition: all 0.2s ease;
+    }
+
+    /* 박스 없애기 */
+    input:focus,
+    input:not(:placeholder-shown) {
+      outline: none;
+    }
+
+  
+  /*   #username+label {
+      top: -10px;
+    }
+
+    #password+label {
+      top: -10px;
+    }  */
+
+    /* 로그인 버튼 */
+    .submit-button {
+      background-color: #A1A1A3;
+      border: none;
+      color: white;
+      width: 100%;
+      height: 35px;
+      font-size: 14pt;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header"></div>
+  <div id="container">
+    <div class="contents">
+      <div class="login">
+
+        <form id="loginForm">
+          <div class="centercenter">
+          <div class="input-box">
+            <input id="username" type="text" name="username" placeholder="" required>
+            <label for="username">ID</label>
+          </div>
+
+          <div class="input-box">
+            <input id="password" type="password" name="password" placeholder="" required>
+            <label for="password">PWD</label>
+          </div>
+          <input type="submit" value="LOGIN" class="submit-button">
+        </div>
+        </form>
+
+        </a>
+      </div>
+    </div>
+
+    <div id="footer"> </div>
+  </div>
+
+
+</body>
+
+</html>

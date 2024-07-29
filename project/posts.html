@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>수진blog_list</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    .container {
+      width: 800px;
+      height: 610px;
+      margin: 0 auto;
+    }
+
+    .contents {
+      height: 550px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:link {
+      color: black
+    }
+
+    a:visited {
+      color: black
+    }
+
+    ul {
+      list-style: none;
+    }
+
+
+    .project5, .project4, .project3{
+      overflow: hidden;
+      margin-top: 5%;
+    }
+
+    .review{
+      float: left;
+      position: absolute;
+      display: none;
+      transition: 0.5 ease-in;
+    }
+
+
+    video{
+      width: 400px;
+      height: 400px;
+
+    }
+    section:hover > .review{
+      transform: translate(400px, -70px);
+      display: block;
+    }
+
+    .pagechange {
+      background-color: #A1A1A3;
+      border: none;
+      color: white;
+      width: 20%;
+      height: 35px;
+      font-size: 14pt;
+      margin-top: 10px;
+    }
+
+    .pagechangebutton {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+  <!-- 본문 시작 -->
+  <div class="container">
+    <div class="contents">
+      <section class="project4">
+        <a href="detail5.html">
+        <h2>GPS 기반 반려견 산책 연결 플랫폼 (웹 앱)</h2>
+        <p>SpringSecurity +kakao API 이용한 SNS 로그인 페이지와<br>
+          Chart.js 이용 데이터 확인 가능, Spring Scheduler로 회원 관리가 가능한 관리자 페이지 풀스택 구현</p>
+        </a>
+          <div class="review">
+            <video src="../CSS/video/pro5.mp4" autoplay loop muted></video>
+          </div>
+      </section>
+      <section class="project4">
+        <a href="detail4.html">
+        <h2>개인 홈페이지 만들기(SPRING)</h2>
+        <p> ajax를 이용하여 비동기통신으로 jQuery 모달창을 이용하는 프론트엔드 및 Spring RestFul API를 이용한 백엔드 구현</p>
+       </a>
+        <div class="review">
+          <video src="../CSS/video/pro4.mp4" autoplay loop></video>
+        </div>
+      </section>
+      <section class="project3">
+        <a href="detail3.html">
+        <h2>개인 홈페이지 만들기(CRUD)</h2>
+        <p>MVC 패턴의 MODEL2 구조로 변환 fetch 함수를 이용해 비동기 통신하는 프론트엔드 및 백엔드 구현</p>
+      </a>
+        <div class="review">
+          <video src="../CSS/video/pro3.mov" autoplay loop></video>
+        </div>
+      </section>
+    </div>
+    <div class="pagechangebutton">
+      <input type="button" value=">" class="pagechange" onclick="window.location.href='posts2.html'">
+    
+    </div>
+
+  </div>
+
+  <div id="footer"> </div>
+</body>
+
+</html>
