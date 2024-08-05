@@ -34,11 +34,12 @@
       align-items: center;
 
     }
+
     .contents {
       width: 800px;
       height: 625px;
       margin: 0 auto;
-      
+
     }
 
     .contact {
@@ -50,7 +51,8 @@
     #contactform h3 {
       margin-bottom: 30px;
     }
-    .contactinput{
+
+    .contactinput {
       width: 80%;
       margin: 0 auto;
     }
@@ -92,14 +94,20 @@
       border: none;
       color: white;
       width: 80%;
-      
+
       height: 35px;
       font-size: 14pt;
       margin-top: 20px;
+      margin-bottom: 20px;
     }
 
 
+    .infor {
 
+      margin-top: 10px;
+      margin-bottom: 10px;
+      clear: both;
+    }
   </style>
 </head>
 
@@ -112,32 +120,49 @@
         <form id="contactform">
           <h3> 아래 양식을 작성하여 메세지를 보내주시면 최대한 빨리 연락드리겠습니다.</h3>
           <div class="contactinput">
-          <div class="input-box">
-            <label for="username"> NAME</label>
-            <input id="username" type="text" name="username" placeholder="" required>
-          </div>
-          <div class="input-box">
-            <label for="email">EMAILL </label>
-            <input id="email" type="text" name="email ">
-          </div>
-          <div class="input-box">
-            <label> PHONE</label>
-            <input type="text">
-          </div>
-          <div class="input-box">
-            <label> MESSAGE</label>
-            <textarea cols="30" rows="5" id="MESSAGE" placeholder=""> </textarea>
-          </div>
-          <input type="submit" value="SEND" class="submit-button">
+            <div class="input-box">
+              <label for="username"> NAME</label>
+              <input id="username" type="text" name="username" placeholder="" required>
+            </div>
+            <div class="input-box">
+              <label for="email">EMAILL </label>
+              <input id="email" type="text" name="email ">
+            </div>
+            <div class="input-box">
+              <label> PHONE</label>
+              <input type="text">
+            </div>
+            <div class="input-box">
+              <label> MESSAGE</label>
+              <textarea cols="30" rows="5" id="MESSAGE" placeholder=""> </textarea>
+            </div>
+            <!-- <div class="infor">
+              <h3>개인정보 동의</h3>
+              <p>
+                본인은 귀사가 다음과 같이 본인의 개인정보를 수집 및 이용하는 것에 동의합니다.
+              </p>
+              <ul>
+                <li>수집항목: 이름, 연락처, 이메일 주소</li>
+                <li>수집목적: 서비스 제공 및 고객 관리</li>
+              </ul>
+              <div class="form-group">
+                <input type="checkbox" id="consent" name="consent">
+                <label for="consent">개인정보 수집 및 이용에 동의합니다.</label>
+              </div> -->
+            </div>
+
+            <input type="submit" value="SEND" class="submit-button">
         </form>
       </div>
-      </div>
     </div>
+  </div>
   </div>
   <!-- 본문끝 -->
 
   <div id="footer"> </div>
+  <script>
 
+  </script>
 
 
 
