@@ -13,101 +13,7 @@
       $("#footer").load("footer.html")
     });
   </script>
-  <style>
-    * {
-      margin: 0;
-      /* 브라우저 기본 마진 리셋 */
-      padding: 0;
-      /* 브라우저 기본 패딩 리셋 */
-      box-sizing: border-box;
-      /* 테두리까지 포함해서 박스 모델 너비로 계산 */
-    }
-
-    .container {
-      width: 800px;
-      height: 100%;
-      margin: 0 auto;
-    }
-    
-
-    a {
-      text-decoration: none;
-      /* 텍스트 링크 밑줄 없애기 */
-    }
-
-    section {
-      display: flex;
-    }
-
-    ul {
-      list-style: none;
-      justify-self: flex-end;
-    }
-
-    video {
-      margin: 10px;
-      width: 350px;
-      justify-self: flex-start;
-    }
-
-    video>.speed2 {
-      margin: 10px;
-      width: 350px;
-    }
-
-    section>img {
-      width: 350px;
-      margin: 15px;
-    }
-
-    .pagechange {
-      background-color: #A1A1A3;
-      border: none;
-      color: white;
-      width: 10%;
-      height: 35px;
-      font-size: 14pt;
-      margin-top: 10px;
-    }
-
-    .pagechangebutton {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-    }
-
-    .move {
-      width: 50px;
-      position: fixed;
-      right: 100px;
-      bottom: 20px;
-      overflow: hidden;
-    }
-
-    .move>a {
-      display: block;
-    }
-
-    .move>img {
-      display: block;
-      width: 100%;
-      height: 100%
-    }
-
-    .move>p {
-      display: none;
-    }
-
-    a>img {
-      width: 50px;
-    }
-
-    .move:hover p {
-      display: block;
-      color: white;
-      transform: translate(10px,34px);
-    }
-  </style>
+  <link rel="stylesheet" href="../CSS/style/detail.css">
 </head>
 
 <body>
@@ -128,7 +34,7 @@
       <section>
         <img src="../CSS/image/p3_1.png">
         <ul>
-          <li>Create
+          <li><span style="font-weight: bold;">Create</span>
             <ul>
               <li>해당 입력칸을 사용하여 작성이 가능합니다.</li>
             </ul>
@@ -138,7 +44,10 @@
       <section>
         <img src="../CSS/image/p3_2.png">
         <ul>
-          <li>Read
+          <li>
+            <span style="font-weight: bold;">
+              Read
+            </span>
             <ul>
               <li> 최신순 또는 조회수순으로 정렬한 게시글을 원하는갯수(5개로 작업)만큼 출력하여 간단하게 게시판글 확인이 가능</li>
               <li>전체보기를 누르면 해당 게시판으로 이동하고, 게시글 제목을 누르면 해당 게시글로 바로 이동이 가능</li>
@@ -149,7 +58,10 @@
       <section>
         <img src="../CSS/image/p3_3.png">
         <ul>
-          <li>Update
+          <li>
+            <span style="font-weight: bold;">
+              Update
+            </span>
             <ul>
               <li>로그인한 회원의 아이디를 확인하여 본인이 작성한 글만 수정 삭제가 가능합니다.</li>
             </ul>
@@ -159,14 +71,28 @@
       <section>
         <img src="../CSS/image/p3_4.png">
         <ul>
-          <li>Delete
+          <li>
+            <span style="font-weight: bold;">
+              Delete
+            </span>
             <ul>
               <li>관리자의 경우 모든 글 삭제가 가능하며, 게시판 목록에서 다중 선택 삭제도 가능합니다.</li>
             </ul>
           </li>
         </ul>
       </section>
-     
+      <section>
+        <video src="../CSS/video/pro3.mov" autoplay controls loop muted></video>
+        <ul>
+          <li>
+            <span style="font-weight: bold;">
+              영상으로 프로젝트를 확인하세요!
+            </span>
+            <ul>
+          </li>
+        </ul>
+      </section>
+
     </div>
   </div>
   <div class="move">

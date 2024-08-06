@@ -32,14 +32,14 @@
       float: left;
     }
 
-    #header_logo:link {
+    /* #header_logo:link {
       color: black;
     }
 
     #header_logo:visited {
       color: black;
       text-decoration: none;
-    }
+    } */
 
     nav {
       margin-right: 20px;
@@ -69,14 +69,14 @@
 <body>
   <header id="header">
 
-    <div id="logo"><a href="home.html" id="header_logo">수진 Blog</a></div>
+    <div id="logo"></div>
     <nav>
       <ui>
-        <li class="nav"><a href="login.html">LOGIN</a></li>
-        <li class="nav"><a href="contact.html">CONTACT</a></li>
-        <li class="nav"><a href="posts.html">POSTS</a></li>
-        <li class="nav"><a href="about.html">ABOUT</a></li>
-        <li class="nav"><a href="home.html">HOME</a></li>
+        <li class="nav"></li>
+        <li class="nav"></li>
+        <li class="nav"></li>
+        <li class="nav"></li>
+        <li class="nav"></li>
       </ui>
     </nav>
     <br>
@@ -84,17 +84,49 @@
   </header>
 
   <script>
-    document.querySelectorAll('.nav').forEach(function (navItem) {
-      navItem.addEventListener('mouseover', function () {
-        navItem.style.fontWeight = 'bold';
-        navItem.style.transition = 'all 0.3s ease-in';
+    //우측 네비바
+    const navItems = [
+      { href: "login.html", text: "LOGIN" },
+      { href: "contact.html", text: "CONTACT" },
+      { href: "posts.html", text: "POSTS" },
+      { href: "about.html", text: "ABOUT" },
+      { href: "home.html", text: "HOME" }
+    ];
+
+    const navList = document.querySelectorAll('.nav');
+    navList.forEach((navItem, index) => {
+      const a = document.createElement("a");
+      a.href = navItems[index].href;
+      a.textContent = navItems[index].text;
+     
+      a.style.color = "black";
+      a.style.textDecoration = "none"; 
+
+      navItem.appendChild(a);
+     
+      a.addEventListener('mouseover', function () {
+        a.style.fontWeight = 'bold';
+        a.style.transition = 'all 0.3s ease-in';
       });
 
-      navItem.addEventListener('mouseout', function () {
-        navItem.style.fontWeight = 'normal'; 
+      a.addEventListener('mouseout', function () {
+        a.style.fontWeight = 'normal';
       });
     });
 
+
+    // 좌측 로고
+    document.querySelectorAll("#logo").forEach(function (logoItem) {
+      const link = document.createElement("a");
+      link.href = "home.html";
+      link.id = "header_logo";
+      link.textContent = "수진 Blog";
+
+      link.style.color = "black";
+      link.style.textDecoration = "none";
+
+      logoItem.appendChild(link);
+    });
 
   </script>
 </body>

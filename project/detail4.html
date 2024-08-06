@@ -13,109 +13,7 @@
       $("#footer").load("footer.html")
     });
   </script>
-  <style>
-    * {
-      margin: 0;
-      /* 브라우저 기본 마진 리셋 */
-      padding: 0;
-      /* 브라우저 기본 패딩 리셋 */
-      box-sizing: border-box;
-      /* 테두리까지 포함해서 박스 모델 너비로 계산 */
-    }
-
-    .container {
-      width: 800px;
-      height: 100%;
-      margin: 0 auto;
-    }
-
-    a {
-      text-decoration: none;
-      /* 텍스트 링크 밑줄 없애기 */
-    }
-
-    section {
-      display: flex;
-    }
-    p{
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: none;
-      justify-self: flex-end;
-    }
-    li{
-      font-size: 14px;
-    }
-
-    video {
-      width: 350px;
-      justify-self: flex-start;
-      margin: 15px;
-    }
-
-    video>.speed2 {
-      margin: 10px;
-      width: 350px;
-    }
-    section{
-      margin-bottom: 10px;
-    }
-
-    section>img {
-      width: 350px;
-      margin: 15px;
-    }
-
-    .pagechange {
-      background-color: #A1A1A3;
-      border: none;
-      color: white;
-      width: 10%;
-      height: 35px;
-      font-size: 14pt;
-      margin-top: 10px;
-    }
-
-    .pagechangebutton {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-    }
-
-    .move {
-      width: 50px;
-      position: fixed;
-      right: 100px;
-      bottom: 20px;
-      overflow: hidden;
-    }
-
-    .move>a {
-      display: block;
-    }
-
-    .move>img {
-      display: block;
-      width: 100%;
-      height: 100%
-    }
-
-    .move>p {
-      display: none;
-    }
-
-    a>img {
-      width: 50px;
-    }
-
-    .move:hover p {
-      display: block;
-      color: white;
-      transform: translate(10px, 34px);
-    }
-  </style>
+ <link rel="stylesheet" href="../CSS/style/detail.css">
 </head>
 
 <body>
@@ -135,7 +33,10 @@
       <section>
         <img src="../CSS/image/p4_1.png">
         <ul>
-          <li>첨부파일
+          <li>
+            <span style="font-weight: bold;">
+              첨부파일              
+            </span>
             <ul>
               <li>게시글 내에 이미지 파일 첨부가 가능하며 댓글 작성 및 수정이 가능합니다.</li>
             </ul>
@@ -146,7 +47,10 @@
       <section>
         <img src="../CSS/image/p4_2.png">
         <ul>
-          <li>답글
+          <li>
+            <span style="font-weight: bold;">
+              답글
+            </span>
             <ul>
               <li> QNA게시판에 사용자가 남긴 글에 답글작성이 가능하고 비동기 통신을 활용하여 페이지 전환 없이 작성이 가능합니다. 또한 게시글 작성폼은 Jquery Dialog를 활용하여 모달
                 형태로 구현했습니다</li>
@@ -158,7 +62,10 @@
       <section>
       <img src="../CSS/image/p4_3.png">
       <ul>
-        <li>페이징
+        <li>
+          <span style="font-weight: bold;">
+            페이징
+          </span>
           <ul>
             <li>게시글을 건수대로 페이징 처리하였습니다. 상단 건수에 있는 드롭박스를 누르면 게시글 개수가 선택이 가능합니다. 게시글 제목을 검색할 수 있습니다.</li>
           </ul>
@@ -170,7 +77,9 @@
         <img src="../CSS/image/p4_4.png">
         <ul>
           <li>
-            관리자 페이지
+            <span style="font-weight: bold;">
+              관리자 페이지
+            </span>
             <ul>
               <li>회원목록 출력, 회원 탈퇴, 게시글 삭제 및 공지사항 작성</li>
               <li>모든 회원의 정보를 조회할 수 있으며, 다중 선택하여 회원의 계정을 삭제시킬 수 있습니다. </li>
@@ -182,9 +91,10 @@
         <video src="../CSS/video/pro4.mp4" autoplay controls loop muted></video>
         <ul>
           <li>
-            영상으로 프로젝트를 확인하세요!
+            <span style="font-weight: bold;">
+              영상으로 프로젝트를 확인하세요!
+            </span>
             <ul>
-
           </li>
         </ul>
       </section>

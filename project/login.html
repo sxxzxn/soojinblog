@@ -123,7 +123,7 @@
     <div class="contents">
       <div class="login">
 
-        <form id="loginForm" name="loginForm" method="post" action="" onsubmit="return false">
+        <form id="loginForm" name="loginForm" method="post" action="">
           <div class="centercenter">
             <div class="input-box">
               <input id="username" type="text" name="username" placeholder="">
@@ -137,7 +137,7 @@
               <div id="loginCheck">
               </div>
             </div>
-            <input type="submit" value="LOGIN" class="submit-button" onclick="sendFrm()">
+            <input type="submit" value="LOGIN" class="submit-button" onclick="sendFrm(event)">
           </div>
         </form>
 
@@ -151,24 +151,27 @@
       });
 
 
-      function sendFrm() {
+      function sendFrm(event) {
+        event.preventDefault();
         const frm = document.getElementById("loginForm");
-        let uName = frm.username.value;
+        let username = frm.username.value;
         let password = frm.password.value;
         const divUserName = document.getElementById("loginCheck");
-        if (uName === null || uName === "") {
+        if (username === "") {
           divUserName.innerText = "아이디를 입력해 주세요.";
           divUserName.style.color = "red";
           divUserName.style.fontSize = "10px";
-          uName.focus();
-        } else if (password === null || password === "") {
+          frm.username.focus();
+        } else if (password === "") {
           divUserName.innerText = "비밀번호를 입력해 주세요.";
           divUserName.style.color = "red";
           divUserName.style.fontSize = "10px";
-          password.focus();
-        } 
-          return false;
+          frm.password.focus();
+        }else {
+          alert(`${username}` + "님 로그인되었습니다.");
+          loginForm.submit();
         }
+      }
     </script>
     <div id="footer"> </div>
   </div>

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  /* 브라우저 기본 마진 리셋 */
+  padding: 0;
+  /* 브라우저 기본 패딩 리셋 */
+  box-sizing: border-box;
+  /* 테두리까지 포함해서 박스 모델 너비로 계산 */
+}
+
+.container {
+  width: 800px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  /* 텍스트 링크 밑줄 없애기 */
+}
+
+h2{
+  margin-bottom: 10px;
+}
+h3{
+  margin-top: 10px;
+}
+section {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  justify-self: flex-end;
+  font-size: 14px;
+}
+
+
+video {
+  margin: 10px;
+  width: 350px;
+  justify-self: flex-start;
+}
+
+video>.speed2 {
+  margin: 10px;
+  width: 350px;
+}
+
+section>img {
+  width: 350px;
+  margin: 15px;
+}
+
+.pagechange {
+  background-color: #A1A1A3;
+  border: none;
+  color: white;
+  width: 10%;
+  height: 35px;
+  font-size: 14pt;
+  margin-top: 10px;
+}
+
+.pagechangebutton {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.move {
+  width: 50px;
+  position: fixed;
+  right: 100px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+.move>a {
+  display: block;
+}
+
+.move>img {
+  display: block;
+  width: 100%;
+  height: 100%
+}
+
+.move>p {
+  display: none;
+}
+
+a>img {
+  width: 50px;
+}
+
+.move:hover p {
+  display: block;
+  color: white;
+  transform: translate(10px, 34px);
+}

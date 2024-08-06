@@ -13,99 +13,7 @@
       $("#footer").load("footer.html")
     });
   </script>
-  <style>
-    * {
-      margin: 0;
-      /* 브라우저 기본 마진 리셋 */
-      padding: 0;
-      /* 브라우저 기본 패딩 리셋 */
-      box-sizing: border-box;
-      /* 테두리까지 포함해서 박스 모델 너비로 계산 */
-    }
-
-    .container {
-      width: 800px;
-      height: 100%;
-      margin: 0 auto;
-    }
-
-    a {
-      text-decoration: none;
-      /* 텍스트 링크 밑줄 없애기 */
-    }
-
-    section {
-      display: flex;
-    }
-
-    ul {
-      list-style: none;
-      justify-self: flex-end;
-    }
-
-    video {
-      margin: 10px;
-      width: 350px;
-      justify-self: flex-start;
-    }
-
-    video>.speed2 {
-      margin: 10px;
-      width: 350px;
-    }
-
-    section>img {
-      width: 350px;
-    }
-
-    .pagechange {
-      background-color: #A1A1A3;
-      border: none;
-      color: white;
-      width: 10%;
-      height: 35px;
-      font-size: 14pt;
-      margin-top: 10px;
-    }
-
-    .pagechangebutton {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 10px;
-    }
-
-    .move {
-      width: 50px;
-      position: fixed;
-      right: 100px;
-      bottom: 20px;
-      overflow: hidden;
-    }
-
-    .move>a {
-      display: block;
-    }
-
-    .move>img {
-      display: block;
-      width: 100%;
-      height: 100%
-    }
-
-    .move>p {
-      display: none;
-    }
-
-    a>img {
-      width: 50px;
-    }
-
-    .move:hover p {
-      display: block;
-      color: white;
-      transform: translate(10px, 34px);
-    }
-  </style>
+<link rel="stylesheet" href="../CSS/style/detail.css">
 </head>
 
 <body>
@@ -115,31 +23,32 @@
   <div class="container">
     <div class="contents">
       <div class="pagechangebutton" id="top">
-        <input type="button" value="<" class="pagechange" onclick="window.location.href='posts.html'">
+        <input type="button" value="<" class="pagechange" onclick="window.location.href='posts2.html'">
       </div>
       <h2>Project1.소켓을 활용한 채팅 프로그램</h2>
-      <p>socket 통신의 기본 개념을 이용하여 회원 관리 (회원 가입, 회원정보 수정, 회원 상세보기) 기능이 추가된 채팅 프로그램입니다. 채팅방 생성 및 삭제가 가능하고, TCP 양방향 통신을 이용 하여
+      <p style="margin-bottom: 60px;">socket 통신의 기본 개념을 이용하여 회원 관리 (회원 가입, 회원정보 수정, 회원 상세보기) 기능이 추가된 채팅 프로그램입니다. 채팅방 생성 및 삭제가 가능하고, TCP 양방향 통신을 이용 하여
         채팅을 구현했습니다.</p>
 
 
       <section>
-        <video src="../CSS/video/pro1.mp4" autoplay controls loop></video>
+        <video src="../CSS/video/pro1.mp4" autoplay controls loop style="margin-top: -100px;"></video>
         <ul>
-          <li>회원관리
+          <!-- <li>회원관리
             <ul>
               <li>회원의 존재 여부를 확인하고, 회원 추가, 로그인, 회원 정보 수정, 회원 삭제 등을 처리합니다.</li>
-            </ul>
+            </ul> -->
           <li>
-            채팅방
+            <span style="font-weight: bold;" >채팅방</span>
             <ul>
               <li>incoming(JSONObject jsonObject) 메소드와 message(JSONObject jsonObject) 메소드에서 채팅방과 관련된 동작을 수행합니다.
                 incoming은
                 채팅방에 참여하는 동작을 처리하고, message는 채팅 메시지를 모든 클라이언트에게 전송합니다.</li>
             </ul>
-          <li>메세지송수신
+          <li>
+            <span style="font-weight: bold;" >메세지 송수신</span>
             <ul>
               <li>send(String json) 메소드에서 클라이언트에게 JSON 형식의 메시지를 전송합니다. DataOutputStream를 사용하여 메시지를 클라이언트로 전송합니다.</li>
-              <li>receive() 메소드에서 클라이언트로부터 JSON 형식의 메시지를 수신합니다. DataInputStream을 사용하여 클라이언트의 메시지를 읽어옵니다. 읽어온 메시지에 따라 다양한
+              <li style="margin-bottom: 100px;">receive() 메소드에서 클라이언트로부터 JSON 형식의 메시지를 수신합니다. DataInputStream을 사용하여 클라이언트의 메시지를 읽어옵니다. 읽어온 메시지에 따라 다양한
                 처리를 수행합니다.</li>
             </ul>
           </li>
