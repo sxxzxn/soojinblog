@@ -7,12 +7,7 @@
   <title>수진blog_list</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#header").load("header.html")
-      $("#footer").load("footer.html")
-    });
-  </script>
+
   <style>
     * {
       margin: 0;
@@ -46,8 +41,7 @@
       height: 550px;
     }
 
-    .project2,
-    .project1 {
+    .project{
       overflow: hidden;
       margin-top: 5%;
     }
@@ -64,10 +58,10 @@
       height: 400px;
     }
 
-    section:hover>.review {
+    /* section:hover>.review {
       transform: translate(400px, -70px);
       display: block;
-    }
+    } */
 
     .pagechange {
       background-color: #A1A1A3;
@@ -93,7 +87,7 @@
 
     <div class="contents">
 
-      <section class="project2">
+      <section class="project">
         <a href="detail2.html">
           <h2>개인 홈페이지 만들기</h2>
           <p>HTML, CSS, JS, JSP를 사용한 프론트엔드 및 회원관리 기능을 MVC 패턴의 MODEL1 구조로 백엔드 구현</p>
@@ -102,8 +96,8 @@
           <video src="../CSS/video/pro2.mp4" autoplay loop muted></video>
         </div>
       </section>
-      <a href="detail1.html">
-        <section class="project1">
+      <section class="project">
+          <a href="detail1.html">
           <h2>socket 을 활용한 채팅 프로그램</h2>
           <p>socket을 활용한 TCP 양방향 통신 실시간 1:1채팅 프로그램 구현</p>
       </a>
@@ -118,7 +112,28 @@
     </div>
 
   </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
 
+
+    document.querySelectorAll('.project').forEach(function (project) {
+      const review = project.querySelector('.review');
+
+      project.addEventListener('mouseover', function () {
+        review.style.display = 'block'; // 비디오 보이기
+        review.style.transform= "translate(400px, -70px)"; 
+      });
+
+      project.addEventListener('mouseout', function () {
+        review.style.display = 'none'; // 비디오 숨기기
+      });
+    });
+
+
+  </script>
   <div id="footer"> </div>
 </body>
 

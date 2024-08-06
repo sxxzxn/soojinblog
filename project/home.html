@@ -4,12 +4,7 @@
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $("#header").load("header.html")
-    $("#footer").load("footer.html")
-  });
-</script>
+
 
 <head>
   <meta charset="UTF-8">
@@ -62,9 +57,9 @@
       transition: background-size 0.5s ease;
     }
 
-    .box:hover {
+    /* .box:hover {
       background-size: 150%;
-    }
+    } */
 
     .box1 {
       background-image: url('../css/image/soojin.jpg');
@@ -98,7 +93,7 @@
       background-size: 120%;
     }
 
-    .text{
+    .text {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
       text-align: center;
@@ -107,7 +102,7 @@
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: all 0.5s ease;
+      /* transition: all 0.5s ease; */
     }
 
 
@@ -118,9 +113,9 @@
       height: 500px;
     }
 
-    .box1:hover .text1 {
+    /* .box1:hover .text1 {
       opacity: 1;
-    }
+    } */
 
     .text2 {
       margin-top: -15px;
@@ -129,9 +124,9 @@
       height: 132.5px;
     }
 
-    .box2:hover .text2 {
+    /* .box2:hover .text2 {
       opacity: 1;
-    }
+    } */
 
     .text3 {
       margin-top: -15px;
@@ -140,9 +135,9 @@
       height: 367.5px;
     }
 
-    .box3:hover .text3 {
+    /* .box3:hover .text3 {
       opacity: 1;
-    }
+    } */
 
     .text4 {
       margin-top: -15px;
@@ -151,13 +146,13 @@
       height: 134.5px;
     }
 
-    .box4:hover .text4 {
+    /* .box4:hover .text4 {
       opacity: 1;
     }
 
     .box5:hover {
       background-image: url('../css/image/hani3.jpg');
-    }
+    } */
   </style>
 </head>
 
@@ -198,7 +193,41 @@
     </div>
 
   </div>
- 
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+
+
+    window.onload = function () {
+      document.querySelectorAll('.box').forEach(function (boxItem) {
+        boxItem.addEventListener('mouseover', function () {
+          boxItem.style.backgroundSize = "150%";
+          const text = boxItem.querySelector('.text');
+          if (text) {
+            text.style.opacity = '1';
+          }
+          if (boxItem.classList.contains('box5')) {
+            boxItem.style.backgroundImage = "url('../css/image/hani3.jpg')";
+          }
+        });
+
+        boxItem.addEventListener('mouseout', function () {
+          boxItem.style.backgroundSize = boxItem.classList.contains('box1') ? "141%" : "120%";
+          const text = boxItem.querySelector('.text');
+          if (text) {
+            text.style.opacity = '0';
+          }
+          if (boxItem.classList.contains('box5')) {
+            boxItem.style.backgroundImage = "url('../css/image/hani1.jpg')";
+          }
+        });
+      });
+    }
+
+    
+  </script>
 
   <div id="footer"> </div>
   </div>

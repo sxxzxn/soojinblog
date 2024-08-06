@@ -47,7 +47,7 @@
       margin: 0px auto;
       /* 내용을 화면 가운데 배치하도록 좌우 마진을 auto로 */
       padding-top: 150px;
-      padding-left: 20vh;
+      padding-left: 17vh;
     }
 
     #loginForm input {
@@ -128,7 +128,7 @@
             <div class="input-box">
               <input id="username" type="text" name="username" placeholder="">
               <label for="username">ID</label>
-             
+
             </div>
 
             <div class="input-box">
@@ -148,28 +148,27 @@
       $(document).ready(function () {
         $("#header").load("header.html")
         $("#footer").load("footer.html")
-    });
+      });
 
 
       function sendFrm() {
         const frm = document.getElementById("loginForm");
         let uName = frm.username.value;
         let password = frm.password.value;
+        const divUserName = document.getElementById("loginCheck");
         if (uName === null || uName === "") {
-          const divUserName = document.getElementById("loginCheck");
           divUserName.innerText = "아이디를 입력해 주세요.";
           divUserName.style.color = "red";
           divUserName.style.fontSize = "10px";
           uName.focus();
-        } else if (password  === null || password === "") {
-          const divUserName = document.getElementById("loginCheck");
+        } else if (password === null || password === "") {
           divUserName.innerText = "비밀번호를 입력해 주세요.";
           divUserName.style.color = "red";
           divUserName.style.fontSize = "10px";
-          password .focus();
+          password.focus();
         } 
-        return false;
-      }
+          return false;
+        }
     </script>
     <div id="footer"> </div>
   </div>

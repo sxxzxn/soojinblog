@@ -59,10 +59,10 @@
       font-size: 13px;
     }
 
-    .nav:hover {
+    /* .nav:hover {
       font-weight: bold;
       transition: all 0.9 ease-in;
-    }
+    } */
   </style>
 </head>
 
@@ -82,6 +82,21 @@
     <br>
     <div id="main"></div>
   </header>
+
+  <script>
+    document.querySelectorAll('.nav').forEach(function (navItem) {
+      navItem.addEventListener('mouseover', function () {
+        navItem.style.fontWeight = 'bold';
+        navItem.style.transition = 'all 0.3s ease-in';
+      });
+
+      navItem.addEventListener('mouseout', function () {
+        navItem.style.fontWeight = 'normal'; 
+      });
+    });
+
+
+  </script>
 </body>
 
 </html>
