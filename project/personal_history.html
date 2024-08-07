@@ -14,69 +14,74 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     a {
       text-decoration: none;
     }
-    
+
     ul {
       list-style: none;
     }
-    
+
     .container {
       width: 800px;
       margin: 0 auto;
     }
-    
+
     .contents {
       height: 550px;
     }
-    
+
     .home2 {
       padding-top: 20px;
       text-align: center;
     }
-    
+
     .home {
       width: 800px;
       margin: 10% auto;
     }
-    
+
     .sj {
       width: 120px;
       float: left;
       margin: 10%;
-      
+
     }
-    hr{
+
+    hr {
       clear: both;
     }
-    
+
     section {
       width: 800px;
       margin: 10px auto;
       padding: 10px;
       border-radius: 4px;
     }
-    
-    table,th,td {
+
+    table,
+    th,
+    td {
       border: 1px solid black;
       border-collapse: collapse;
     }
-    
-    th, td {
+
+    th,
+    td {
       padding: 20px;
     }
-    
+
     th {
       width: 200px;
       background-color: #aca8a8;
       text-align: center;
     }
-    
+
     h2 {
       color: #333;
     }
+
     .move {
       width: 50px;
       position: fixed;
@@ -84,31 +89,34 @@
       bottom: 20px;
       overflow: hidden;
     }
-    
+
     .move>a {
       display: block;
     }
-    
+
     .move>img {
       display: block;
       width: 100%;
       height: 100%
     }
-    
+
     .move>p {
-      display: none;
+      transform: translate(14px, 32px);
+      color: white;
+      font-size: 13px;
     }
-    
+
     a>img {
       width: 50px;
     }
-    
+
+    /*     
     .move:hover p {
       display: block;
       color: white;
       transform: translate(10px,34px);
-    }
-    </style>
+    } */
+  </style>
 </head>
 
 <body>
@@ -157,17 +165,15 @@
               개발자로서, 비동기를 이용한 채팅 프로그램을 만들고, VS Code 와 Java 를 사용하여 개인
               홈페이지를 디자인하며 CSS 와 JavaScript 를 공부했습니다. 또한, 이전에 개발한
               홈페이지를 비동기 통신이 가능하도록 개선하면서 다양한 기술적 도전을 해결하고 역량을
-              쌓았습니다. 이러한 경험을 통해 문제 해결 능력과 창의적인 사고를 키울 수 있었습니다.
-              항상 최선을 다하여 최고의 결과를 이끌어내기 위해 노력하며, 다양한 사람들과의 협업
-              경험을 통해 열린 마음으로 소통하고 함께 일하는 법을 배웠습니다, 팀워크와 협업이 중요한
-              개발 업무에서 큰 장점이 될 것입니다.<br>
+              쌓았습니다. 또한 MD로 근무하며 다양한 사람들과 미팅 하며 얻은 커뮤니케이션 스킬로
+              팀워크와 협업이 중요한 개발 업무에서 큰 장점이 될 것입니다.<br>
               <br>
               천재교육의 주어진 과제들을 해결하며 더 좋은 결과를 이끌어 내며 목표
               달성에 기여할 수 있도록 최선을 다하겠습니다.
             </td>
           </tr>
           <tr>
-            <th >직무역량 </th>
+            <th>직무역량 </th>
             <td>개발에 있어 가장 중요한 것이 사용자가 어떠한 부분을 원하는지 파악하는 것이라
               생각합니다. 사용자 친화적인 서비스를 제공하기 위해 사용자의 요구를 분석하고 이를
               반영하여 개선하는 것이 필수적입니다. 저는 이러한 사용자의 요구를 분석하고 개선한 경험이
@@ -253,24 +259,24 @@
   <div class="move" id="move">
     <p>TOP</p>
     <!-- <a href="#home2"> -->
-      <img src="../CSS/image/love.png">
+    <img src="../CSS/image/love.png">
     <!-- </a> -->
   </div>
   <div id="footer"> </div>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $("#header").load("header.html")
-            $("#footer").load("footer.html")
-          });
-      
-      
-          document.getElementById('move').addEventListener('click', () => {
-            window.scrollTo({
-              top: 0
-              // behavior: 'smooth'
-            });
-          });
-        </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+
+
+    document.getElementById('move').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0
+        // behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 
 </html>

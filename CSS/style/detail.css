@@ -86,15 +86,17 @@ section>img {
 }
 
 .move>p {
-  display: none;
+  transform: translate(14px, 32px);
+  color: white;
+  font-size: 13px;
 }
 
 a>img {
   width: 50px;
 }
 
-.move:hover p {
+/* .move:hover p {
   display: block;
   color: white;
   transform: translate(10px, 34px);
-}
+} */
