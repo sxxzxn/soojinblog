@@ -7,12 +7,6 @@
   <title>수진blog_이력서</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#header").load("header.html")
-      $("#footer").load("footer.html")
-    });
-  </script>
 
   <style>
     * {
@@ -20,66 +14,66 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     a {
       text-decoration: none;
     }
-
+    
     ul {
       list-style: none;
     }
-
+    
     .container {
       width: 800px;
       margin: 0 auto;
     }
-
+    
     .contents {
       height: 550px;
     }
-
+    
     .home2 {
       padding-top: 20px;
       text-align: center;
     }
-
+    
     .home {
       width: 800px;
       margin: 10% auto;
     }
-
+    
     .sj {
       width: 120px;
       float: left;
       margin: 10%;
-
+      
     }
     hr{
       clear: both;
     }
-
+    
     section {
       width: 800px;
       margin: 10px auto;
       padding: 10px;
       border-radius: 4px;
     }
-
+    
     table,th,td {
       border: 1px solid black;
       border-collapse: collapse;
     }
-
+    
     th, td {
       padding: 20px;
     }
-
+    
     th {
       width: 200px;
       background-color: #aca8a8;
       text-align: center;
     }
-
+    
     h2 {
       color: #333;
     }
@@ -90,31 +84,31 @@
       bottom: 20px;
       overflow: hidden;
     }
-
+    
     .move>a {
       display: block;
     }
-
+    
     .move>img {
       display: block;
       width: 100%;
       height: 100%
     }
-
+    
     .move>p {
       display: none;
     }
-
+    
     a>img {
       width: 50px;
     }
-
+    
     .move:hover p {
       display: block;
       color: white;
       transform: translate(10px,34px);
     }
-  </style>
+    </style>
 </head>
 
 <body>
@@ -144,7 +138,7 @@
               <li>phone. 01042300036</li>
             </ul>
           </li> 
-          </li>-->
+        </li>-->
 
       </div>
       <hr>
@@ -256,13 +250,27 @@
 
     </div>
   </div>
-  <div class="move">
+  <div class="move" id="move">
     <p>TOP</p>
-    <a href="#home2">
+    <!-- <a href="#home2"> -->
       <img src="../CSS/image/love.png">
-    </a>
+    <!-- </a> -->
   </div>
   <div id="footer"> </div>
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $("#header").load("header.html")
+            $("#footer").load("footer.html")
+          });
+      
+      
+          document.getElementById('move').addEventListener('click', () => {
+            window.scrollTo({
+              top: 0
+              // behavior: 'smooth'
+            });
+          });
+        </script>
 </body>
 
 </html>

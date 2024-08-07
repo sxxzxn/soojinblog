@@ -7,13 +7,7 @@
   <title>수진blog_post</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#header").load("header.html")
-      $("#footer").load("footer.html")
-    });
-  </script>
- <link rel="stylesheet" href="../CSS/style/detail.css">
+  <link rel="stylesheet" href="../CSS/style/detail.css">
 </head>
 
 <body>
@@ -35,7 +29,7 @@
         <ul>
           <li>
             <span style="font-weight: bold;">
-              첨부파일              
+              첨부파일
             </span>
             <ul>
               <li>게시글 내에 이미지 파일 첨부가 가능하며 댓글 작성 및 수정이 가능합니다.</li>
@@ -60,17 +54,17 @@
       </section>
 
       <section>
-      <img src="../CSS/image/p4_3.png">
-      <ul>
-        <li>
-          <span style="font-weight: bold;">
-            페이징
-          </span>
-          <ul>
-            <li>게시글을 건수대로 페이징 처리하였습니다. 상단 건수에 있는 드롭박스를 누르면 게시글 개수가 선택이 가능합니다. 게시글 제목을 검색할 수 있습니다.</li>
-          </ul>
-        </li>
-      </ul>
+        <img src="../CSS/image/p4_3.png">
+        <ul>
+          <li>
+            <span style="font-weight: bold;">
+              페이징
+            </span>
+            <ul>
+              <li>게시글을 건수대로 페이징 처리하였습니다. 상단 건수에 있는 드롭박스를 누르면 게시글 개수가 선택이 가능합니다. 게시글 제목을 검색할 수 있습니다.</li>
+            </ul>
+          </li>
+        </ul>
       </section>
 
       <section>
@@ -101,13 +95,26 @@
 
     </div>
   </div>
-  <div class="move">
+  <div class="move"  id="move">
     <p>TOP</p>
-    <a href="#top">
       <img src="../CSS/image/love.png">
-    </a>
   </div>
+  
   <div id="footer"> </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+
+    document.getElementById('move').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+  </script>
 </body>
 
 </html>

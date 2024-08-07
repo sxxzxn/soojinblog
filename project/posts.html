@@ -81,9 +81,9 @@
   <div class="container">
     <div class="contents">
       <section class="project">
-        <a href="detail5.html">
-          <h2>GPS 기반 반려견 산책 연결 플랫폼 (웹 앱)</h2>
-        </a>
+        <!-- <a href="detail5.html"> -->
+        <h2>GPS 기반 반려견 산책 연결 플랫폼 (웹 앱)</h2>
+        <!-- </a> -->
         <p>SpringSecurity +kakao API 이용한 SNS 로그인 페이지와<br>
           Chart.js 이용 데이터 확인 가능, Spring Scheduler로 회원 관리가 가능한 관리자 페이지 풀스택 구현</p>
         <div class="review">
@@ -91,18 +91,18 @@
         </div>
       </section>
       <section class="project">
-        <a href="detail4.html">
-          <h2>개인 홈페이지 만들기(SPRING)</h2>
-        </a>
+        <!-- <a href="detail4.html"> -->
+        <h2>개인 홈페이지 만들기(SPRING)</h2>
+        <!-- </a> -->
         <p>ajax를 이용하여 비동기통신으로 jQuery 모달창을 이용하는 프론트엔드 및 Spring RestFul API를 이용한 백엔드 구현</p>
         <div class="review">
           <video src="../CSS/video/pro4.mp4" autoplay loop></video>
         </div>
       </section>
       <section class="project">
-        <a href="detail3.html">
-          <h2 class="project-title">개인 홈페이지 만들기(CRUD)</h2>
-        </a>
+        <!-- <a href="detail3.html"> -->
+        <h2 class="project-title">개인 홈페이지 만들기(CRUD)</h2>
+        <!-- </a> -->
         <p>MVC 패턴의 MODEL2 구조로 변환 fetch 함수를 이용해 비동기 통신하는 프론트엔드 및 백엔드 구현</p>
         <div class="review">
           <video src="../CSS/video/pro3.mov" autoplay loop></video>
@@ -121,18 +121,28 @@
     });
 
 
-
-    // 마우스 오버 시 비디오 표시
     document.querySelectorAll('.project').forEach(function (project) {
       const review = project.querySelector('.review');
 
       project.addEventListener('mouseover', function () {
-        review.style.display = 'block'; // 비디오 보이기
+        review.style.display = 'block'; 
         review.style.transform = "translate(400px, -70px)";
       });
 
       project.addEventListener('mouseout', function () {
-        review.style.display = 'none'; // 비디오 숨기기
+        review.style.display = 'none'; 
+      });
+    });
+
+    const projectLinks = [
+      'detail5.html',
+      'detail4.html',
+      'detail3.html'
+    ];
+
+    document.querySelectorAll('.project').forEach((section, index) => {
+      section.addEventListener('click', () => {
+        window.location.href = projectLinks[index];
       });
     });
   </script>

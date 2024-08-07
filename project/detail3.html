@@ -7,12 +7,6 @@
   <title>수진blog_post</title>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $("#header").load("header.html")
-      $("#footer").load("footer.html")
-    });
-  </script>
   <link rel="stylesheet" href="../CSS/style/detail.css">
 </head>
 
@@ -95,13 +89,26 @@
 
     </div>
   </div>
-  <div class="move">
+  <div class="move" id="move">
     <p>TOP</p>
-    <a href="#top">
+    <!-- <a href="#top"> -->
       <img src="../CSS/image/love.png">
-    </a>
+    <!-- </a> -->
   </div>
   <div id="footer"> </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#header").load("header.html")
+      $("#footer").load("footer.html")
+    });
+
+    document.getElementById('move').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0
+        // behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 
 </html>
