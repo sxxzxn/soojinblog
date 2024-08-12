@@ -116,18 +116,16 @@
 
 
     // 좌측 로고
-    document.querySelectorAll("#logo").forEach(function (logoItem) {
-      const link = document.createElement("a");
-      link.href = "home.html";
-      link.id = "header_logo";
-      link.textContent = "수진 Blog";
-      document.createElement("a")
+     const logoItem =  document.getElementById("logo")
+      const logo = document.createElement("a");
+      logo.href = "home.html";
+      logo.id = "header_logo";
+      logo.textContent = "수진 Blog";
+      logo.style.color = "black";
+      logo.style.textDecoration = "none";
 
-      link.style.color = "black";
-      link.style.textDecoration = "none";
-
-      logoItem.appendChild(link);
-    });
+      logoItem.appendChild(logo);
+    ;
 
   </script>
 </body>
