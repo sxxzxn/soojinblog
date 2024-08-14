@@ -51,11 +51,22 @@
             const img = document.createElement("img");
             img.src = link.imgSrc;
             a.appendChild(img);
-            const p = document.createElement("p");
-            p.innerHTML = ` <p>&copy; copyright 조수진 since 1994</p>`;
             footerContent.appendChild(a);
         });
 
+// 이렇게도 사용 가능..
+        // for (let i = 0; i < footerLinks.length; i++) {
+        //     const link = footerLinks[i];
+        //     const a = document.createElement("a");
+        //     a.href = link.href;
+        //     a.target = "_blank";
+        //     const img = document.createElement("img");
+        //     img.src = link.imgSrc;
+        //     a.appendChild(img);
+        //     footerContent.appendChild(a);
+        // }
+
+        
         const p = document.createElement("p");
         p.innerHTML = "&copy; copyright 조수진 since 1994";
         footerContent.appendChild(p);

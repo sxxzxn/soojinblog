@@ -125,14 +125,30 @@
       const review = project.querySelector('.review');
 
       project.addEventListener('mouseover', function () {
-        review.style.display = 'block'; 
+        review.style.display = 'block';
         review.style.transform = "translate(400px, -70px)";
       });
 
       project.addEventListener('mouseout', function () {
-        review.style.display = 'none'; 
+        review.style.display = 'none';
       });
     });
+
+
+    // const projects = document.querySelectorAll('.project');
+    // for (let i = 0; i < projects.length; i++) {
+    //   const project = projects[i];
+    //   const review = project.querySelector('.review');
+
+    //   project.addEventListener('mouseover', function () {
+    //     review.style.display = 'block';
+    //     review.style.transform = "translate(400px, -70px)";
+    //   });
+
+    //   project.addEventListener('mouseout', function () {
+    //     review.style.display = 'none';
+    //   });
+    // }
 
     const projectLinks = [
       'detail5.html',
@@ -145,6 +161,10 @@
         window.location.href = projectLinks[index];
       });
     });
+
+
+
+    
   </script>
 
   <div id="footer"></div>
